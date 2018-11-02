@@ -1,0 +1,108 @@
+\documentclass[11pt,a4paper,titlepage]{article}
+\usepackage[left=2cm,text={17cm,24cm},top=3cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx}
+\usepackage[ampersand]{easylist}
+\usepackage{hyperref} % url
+
+\bibliographystyle{czplain}
+
+%uvozovky
+\newcommand{\ceskeuvozovky}[1]{\quotedblbase#1\textquotedblleft}
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+    {\LARGE\textsc{Vysoké učení technické v~Brně}}\\
+    \smallskip
+    {\Large\textsc{Fakulta informačních technologií}}\\
+    \bigskip
+    \vspace{\stretch{0.382}}
+    \LARGE{ISA - Síťové aplikace a správa sítí}\\
+    \smallskip
+    \Huge{Čtečka novinek ve formátu Atom s podporou TLS}\\
+    \vspace{\stretch{0.618}}
+\end{center}
+    {\Large Petr Kapoun - xkapou04 \hfill \today }
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+
+\section{Úvod}
+I like IMS. I want A. I not nice when not A. I kill garant when not A. Give A.
+
+
+\section{Úvod do problematiky}
+
+\subsection{Formát Atom}
+\begin{easylist}
+\ListProperties(Hide=100, Hang=true, Progressive=3ex, Style*=$\bullet$ )
+& feed
+&& title
+&& entry
+&&& title
+&&& author
+&&&& name
+&&&& email
+&&& link
+&&& updated
+\end{easylist}
+
+\subsection{Fromát RSS}
+\subsubsection{RSS 1.0}
+\begin{easylist}
+\ListProperties(Hide=100, Hang=true, Progressive=3ex, Style*=$\bullet$ )
+& rdf:RDF
+&& channel
+&&& title
+&& item
+&&& title
+&&& link
+\end{easylist}
+\subsubsection{RSS 2.0}
+\begin{easylist}
+\ListProperties(Hide=100, Hang=true, Progressive=3ex, Style*=$\bullet$ )
+& rss
+&& channel
+&&& title
+&&& item
+&&&& author
+&&&& title
+&&&& link
+\end{easylist}
+
+
+\section{Návrh aplikace}
+\subsection{Rozdělení na části}
+\subsubsection{Argparser}
+\subsubsection{Feedreader}
+\subsubsection{Feed}
+
+
+\section{Popis implementace}
+\subsection{Výpis doplňujících informací ke zdrojům}
+
+
+\section{Základní informace o programu}
+
+\begin{itemize}
+  \item Listová hnojiva.
+  \item Fungicidy.
+  \item Insekticidy.
+  \item Herbicidy.
+  \item Graminicidy.\cite{Ar_Information}
+\end{itemize}
+
+
+\section{Návod na použití}
+
+
+\newpage
+\bibliography{literatura}
+
+\end{document}

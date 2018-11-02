@@ -1,0 +1,19 @@
+#!/bin/ksh
+
+if [ -f feedreader ]; then
+    echo "feedreader exists"
+else
+    exit 1
+fi
+testfiles=`ls test/*.test`
+for var in $testfiles
+do
+	echo -e "Test ${var}"
+    test_cmd=`cat ${var}`
+	echo -e "\tRunning..."
+	`$test_cmd > ${var//.test/.out}`
+	retval=`echo $?`
+	echo -e "\tCommand: ${test_cmd}"
+	echo -e "\tOutput: ${var//.test/.out}"
+	echo -e "\tReturn value: ${retval}"
+done
